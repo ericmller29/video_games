@@ -3,7 +3,7 @@ var express = require('express'),
 	exec = require('child_process').exec;
 
 app.use(function(req, res, next){    
-    res.header("Access-Control-Allow-Origin", "http://games.dev");
+    res.header("Access-Control-Allow-Origin", "http://games.eastoh.co");
     res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
     next();
 })
@@ -11,7 +11,7 @@ app.use(function(req, res, next){
 app.get('/bestbuy', function(req, res){
 	res.setHeader('Content-Type', 'application/json');
 	console.log(req.query.game);
-    exec('python3 bestbuy.py "' + req.query.game + '"', function(err, results){
+    exec('casperjs bestbuy.js --game="' + req.query.game + '"', function(err, results){
     	res.json({
     		name: req.query.game,
     		store: 'Best Buy',
