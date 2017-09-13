@@ -1,3 +1,5 @@
+#!/usr/bin/env nodejs
+
 var express = require('express'),
 	app = express(),
 	exec = require('child_process').exec;
