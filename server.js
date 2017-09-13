@@ -8,6 +8,9 @@ app.use(function(req, res, next){
     next();
 })
 
+app.get('/', function(req, res){
+    res.send('Scrape it!');
+})
 app.get('/bestbuy', function(req, res){
 	res.setHeader('Content-Type', 'application/json');
 	console.log(req.query.game);
