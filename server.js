@@ -1,5 +1,3 @@
-#!/usr/bin/env node
-
 var express = require('express'),
 	app = express(),
 	exec = require('child_process').exec;
@@ -35,4 +33,4 @@ app.get('/gamestop', function(req, res){
     });
 });
 
-app.listen(1234, 'localhost');
+app.listen(1234);
