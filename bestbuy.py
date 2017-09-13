@@ -8,7 +8,7 @@ Created on Mon Sep 11 11:43:16 2017
 import dryscrape
 from bs4 import BeautifulSoup
 import sys
-
+dryscrape.start_xvfb()
 # goOn = 'Y'
 # while goOn.lower() == 'y':
 game = sys.argv[1]
