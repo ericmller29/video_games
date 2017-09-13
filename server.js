@@ -8,10 +8,10 @@ app.use(function(req, res, next){
     next();
 })
 
-app.get('/', function(req, res){
+app.get('/server/', function(req, res){
     res.send('Scrape it!');
 })
-app.get('/bestbuy', function(req, res){
+app.get('/server/bestbuy', function(req, res){
 	res.setHeader('Content-Type', 'application/json');
 	console.log(req.query.game);
     exec('casperjs bestbuy.js --game="' + req.query.game + '"', function(err, results){
@@ -22,7 +22,7 @@ app.get('/bestbuy', function(req, res){
     	})
     });
 });
-app.get('/gamestop', function(req, res){
+app.get('/server/gamestop', function(req, res){
 	res.setHeader('Content-Type', 'application/json');
     exec('python3 gamestop.py "' + req.query.game + '"', function(err, results){
     	res.json({
