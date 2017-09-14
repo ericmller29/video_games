@@ -19,6 +19,7 @@
     "axios": "^0.16.2",
     "express": "^4.15.4",
     "laravel-mix": "^1.4.3",
+    "memory-cache": "^0.2.0",
     "vue-human-env": "^2.0.2",
     "vue-router": "^2.7.0"
   }
