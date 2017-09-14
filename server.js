@@ -4,6 +4,7 @@ var express = require('express'),
 
 app.use(function(req, res, next){    
     res.header("Access-Control-Allow-Origin", "http://games.eastoh.co");
+    res.header("Access-Control-Allow-Origin", "http://games.dev");
     res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
     next();
 })

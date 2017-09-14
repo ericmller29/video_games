@@ -1,6 +1,7 @@
-import Vue from 'vue';
 import env from '../env';
-import axios from 'axios';
+
+import Vue from 'vue';
+window.axios = require('axios');
 
 Vue.component('bestbuy-button', require('./components/BestbuyButton.vue'));
 
