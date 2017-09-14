@@ -1,6 +1,6 @@
 var express = require('express'),
 	app = express(),
-	exec = require('child_process').exec;
+	exec = require('child_process').exec
 
 app.use(function(req, res, next){    
     res.header("Access-Control-Allow-Origin", "http://games.eastoh.co");
