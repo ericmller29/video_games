@@ -22,24 +22,24 @@ export default{
 	},
 	methods: {
 		getBestBuy: function(){
-			return axios.get('http://localhost:3000/bestbuy?game=' + this.game);
+			return axios.get('http://games.eastoh.co/scraper/bestbuy?game=' + this.game);
 		},
 		getGameStop: function(){
-			return axios.get('http://localhost:3000/gamestop?game=' + this.game);
+			return axios.get('http://games.eastoh.co/scraper/gamestop?game=' + this.game);
 		},
 		check: function(){
 			var _this = this;
 			_this.loading = true;
 			_this.loadingText = 'Loading GameStop';
 			_this.results = [];
-			axios.get('http://localhost:3000/gamestop?game=' + this.game)
+			axios.get('http://games.eastoh.co/scraper/gamestop?game=' + this.game)
 				.then(function(res){
 					res.data.game = _this.game;
 					_this.results.push(res.data);
 					
 					_this.loadingText = 'Loading BestBuy';
 
-					return axios.get('http://localhost:3000/bestbuy?game=' + _this.game);
+					return axios.get('http://games.eastoh.co/scraper/bestbuy?game=' + _this.game);
 				})
 				.then(function(res){
 					res.data.game = _this.game;
