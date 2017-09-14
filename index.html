@@ -2,12 +2,36 @@
 <html>
 <head>
 	<title>Check the trade in value!</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 	<link href="https://fonts.googleapis.com/css?family=Lato:400,400i,700" rel="stylesheet">
 	<link rel="stylesheet" href="/dist/css/screen.css">
 </head>
 <body>
 	<div id="app" class="container">
-		<bestbuy-button></bestbuy-button>
+		<!-- <bestbuy-button></bestbuy-button> -->
+		<router-link :to="{ name: 'home' }">Home</router-link>
+		<div class="content">
+			<header class="header">
+				<form v-on:submit.prevent="search()">
+					<div class="form-item-header">
+						<label class="hidden" for="game">What game are you looking for?</label>
+						<input type="text" id="game" placeholder="What game are you looking for?" v-model="searchQuery" autofocus>
+					</div>
+					<button class="form-button-header">
+						<i class="fa fa-search"></i>
+					</button>
+				</form>
+			</header>
+			<div class="content--inner">
+				<router-view></router-view>
+			</div>
+		</div>
+		<p class="foot-note">
+			Made with <i class="fa fa-heart"></i> by <a href="#">Eric Miller</a> &amp; <a href="#">Jacob Seigh</a>.
+		</p>
+		<p class="foot-note styled">
+			All prices are based on United States game stores.
+		</p>
 	</div>
 
 	<script type="text/javascript" src="/dist/js/app.js"></script>

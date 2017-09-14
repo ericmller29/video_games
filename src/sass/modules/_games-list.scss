@@ -1,0 +1,54 @@
+.games-list{
+	flex: 0 0 100%;
+	margin-top: 15px;
+
+	.games-list--item{
+		display: flex;
+		padding: 10px;
+		border: solid 1px rgba(0, 0, 0, 0.1);
+		align-items: center;
+		text-decoration: none;
+		color: #444;
+		transition: background 0.2s, color 0.2s, border 0.2s;
+		margin-top: 10px;
+
+		&:first-child{
+			margin-top: 0;
+		}
+
+		&:hover{
+			background: #23D3BA;
+			color: #fff;
+			border-color: darken(#23D3BA, 10);
+
+			span{
+				color: #fff;
+			}
+		}
+	}
+
+	.game--icon{
+		flex: 0 0 100px;
+		margin-right: 20px;
+
+		img{
+			width: 100%;
+		}
+	}
+	.game--follow-link{
+		font-size: 0.6rem;
+		margin-left: auto;
+		font-style: normal;
+	}
+	span{
+		font-size: 0.8rem;
+		color: #aaa;
+		text-transform: uppercase;
+		font-style: italic;
+		transition: color 0.2s;
+
+		span{
+			color: #23D3BA;
+		}
+	}
+}

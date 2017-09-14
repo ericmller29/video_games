@@ -1,0 +1,25 @@
+.content--inner{
+	padding: 20px;
+	background: #fff;
+	display: flex;
+	flex-direction: column;
+
+	h2,h3,h4,h5,h6{
+		margin: 0;
+	}
+
+	h2{
+		display: inline-block;
+		text-transform: uppercase;
+		font-size: 0.8em;
+		border-bottom: solid 3px $main-color;
+		padding-bottom: 5px;
+		margin-bottom: 10px;
+
+		span{
+			color: $main-color;
+			font-size: 1.3em;
+			margin-left: 10px;
+		}
+	}
+}

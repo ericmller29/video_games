@@ -1,0 +1,16 @@
+.foot-note{
+	font-size: 0.7em;
+	margin: 0;
+	margin-top: 20px;
+	color: #aaa;
+	text-align: center;
+
+	&.styled{
+		font-style: italic;
+	}
+
+	i{
+		color: $main-color;
+		margin: 0 5px;
+	}
+}

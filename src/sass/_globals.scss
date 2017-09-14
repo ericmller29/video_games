@@ -10,5 +10,18 @@ html,body{
 	min-height: 100vh;
 	font-size: 16px;
 	font-family: $font-family;
-	background: #122848;
+	background: #eee;
+	color: #444;
+}
+.hidden{
+	display: none;
+}
+
+a{
+	color: $main-color;
+	text-decoration: none;
+
+	&:hover{
+		text-decoration: underline;
+	}
 }

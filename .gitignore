@@ -1,3 +1,4 @@
 /node_modules
 /src/env/config.local.js
 /dist
+.npm-debug.log

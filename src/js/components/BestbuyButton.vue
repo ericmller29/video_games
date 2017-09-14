@@ -14,6 +14,9 @@
 import env from '../../env';
 
 export default{
+	mounted(){
+		console.log('test');
+	},
 	data: function(){
 		return {
 			game: '',
