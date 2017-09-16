@@ -9,7 +9,8 @@ let routes = [
 	{
 		path: '/search',
 		name: 'search',
-		component: require('./views/Search.vue')
+		component: require('./views/Search.vue'),
+		canReuse: false
 	}
 ];
 

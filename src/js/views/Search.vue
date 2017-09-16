@@ -31,16 +31,27 @@ export default{
 	},
 	mounted(){
 		var _this = this;
-
-		axios.get(env.get('API_URL') + '/scraper/search', {
-			params: {
-				game: this.$route.query.game
-			}
+		if(this.$route.query.game){
+			_this.search(this.$route.query.game);
+		}
+		searchEvent.$on('searched', function(val){
+			_this.results = [];
+			_this.search(val);
 		})
-		.then(function(res){
-			var result = res;
-			_this.results = result.data.results
-		})
+	},
+	methods: {
+		search(val){
+			var _this = this;
+			axios.get(env.get('API_URL') + '/scraper/search', {
+				params: {
+					game: val
+				}
+			})
+			.then(function(res){
+				var result = res;
+				_this.results = result.data.results
+			})
+		}
 	}
 }
 </script>

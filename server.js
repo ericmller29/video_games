@@ -25,8 +25,6 @@ var cache = function(duration){
 }
 
 app.use(function(req, res, next){    
-    res.header("Access-Control-Allow-Origin", "http://games.eastoh.co");
-    res.header("Access-Control-Allow-Origin", "http://games.dev");
     res.header("Access-Control-Allow-Origin", "http://localhost:2222");
     res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
     next();
@@ -36,7 +34,6 @@ app.get('/scraper/', function(req, res){
     res.send('Scrape it!');
 });
 app.get('/scraper/search', cache(864), function(req, res){
-            console.log('should not make it here');
     var requestOptions = {
         url: 'https://www.giantbomb.com/api/games',
         headers: {
